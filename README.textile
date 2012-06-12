@@ -33,7 +33,6 @@ end
 2. Secondly some configuration can be added to the model to add some additional functionality
 
 <pre>
-
 class MyModel
     include Mongoid::Document
     include StripeRails::ActsLikeCustomer
@@ -45,6 +44,7 @@ class MyModel
 
     ...
 end
+</pre>
 
 h3. Callbacks
 
@@ -59,7 +59,6 @@ Stripe rails provides a generator that will create a callback in your main appli
 This will generate a file like this:
 
 <pre>
-
 class ChargeSucceededCallback < StripeRails::Callback
 
   # Some logic to process during the callback
@@ -71,6 +70,7 @@ class ChargeSucceededCallback < StripeRails::Callback
   end
 
 end
+</pre>
 
 if you choose to send a response it must be set in the actions method with the instance variable of response. It will expect a hash that will be later be converted into JSON to give back to stripe.
 
