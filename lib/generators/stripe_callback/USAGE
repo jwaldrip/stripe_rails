@@ -1,0 +1,8 @@
+Description:
+    Explain the generator
+
+Example:
+    rails generate stripe_callback Thing
+
+    This will create:
+        app/stripe_callback/thing_callback.rb

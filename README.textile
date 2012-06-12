@@ -1,0 +1,101 @@
+h1. StripeRails
+
+Stripe Rails was built on top of the official stripe gem to bring ease of use of stripe in your models. The gem also caches the stripe customer response so that if you often use it to check a customers subscription status, it wont have to reach the stripe API on every page load. Lastly, this gem has built in responses for stripe webhooks/callbacks.
+
+h3. Installation
+
+Add the following to your gemfile and run bundle install.
+
+<pre>
+gem 'stripe_rails'
+</pre>
+
+h3. Compatibility
+
+The gem works with rails 3.2.x and mongoid 3.0.0, support for active record will be coming in the very next release.
+
+h2. Usage
+
+h3. Models
+
+Stripe Rails is easily used in your model and some configuration can be added to provide some additional functionality.
+
+1. First, add the following module to your model. This will automatically create the stripe customer when a new model instance is created. Future functionality will be provided to add old models to stripe via a rake task, or you can do this manually by calling: MyModel.stripe.create_customer
+
+<pre>
+class MyModel
+    include Mongoid::Document
+    include StripeRails::ActsLikeCustomer
+    ...
+end
+</pre>
+
+2. Secondly some configuration can be added to the model to add some additional functionality
+
+<pre>
+
+class MyModel
+    include Mongoid::Document
+    include StripeRails::ActsLikeCustomer
+
+    stripe_description :title                           # allows you to provide a method to tell stripe a description for the customer.
+    stripe_subscription_plan :monthly_subscription      # will automatically add the customer to the subscription.
+    stripe_unit_price 45                                # allows the usage of a per unit price which can be used later in callbacks.
+    stripe_units :users                                 # specifies the units to be counted for per unit pricing.
+
+    ...
+end
+
+h3. Callbacks
+
+Stripe rails provides a generator that will create a callback in your main application. Use:
+
+<pre>
+    rails g stripe_callback charge.succeeded
+</pre>
+
+**Note: A list of callbacks can be found in stripes API documentation.
+
+This will generate a file like this:
+
+<pre>
+
+class ChargeSucceededCallback < StripeRails::Callback
+
+  # Some logic to process during the callback
+  def actions
+
+    # The response hash
+    @response = {success: true}
+
+  end
+
+end
+
+if you choose to send a response it must be set in the actions method with the instance variable of response. It will expect a hash that will be later be converted into JSON to give back to stripe.
+
+h4. Unused callbacks
+
+Unused callbacks will respond with the proper 501 (Not Implemented) response.
+
+h2. How to contribute
+
+* Fork the project on Github
+* Create a topic branch for your changes
+* Ensure that you provide test coverage for your changes
+* Ensure that all tests pass (`bundle exec rake`)
+* Create a pull request on Github
+
+h2. Project Info
+
+StripeRails was created by "Jason Waldrip":http://www.jasonwaldrip.com/
+
+The project is hosted on Github: "http://github.com/jwaldrip/stripe_rails":http://github.com/jwaldrip/stripe_rails, where your contributions, forkings, comments, issues and feedback are greatly welcomed.
+
+Copyright (c) 2012 Jason Waldrip, released under the MIT license.
+
+h4. More to documentation to come in the next versions!
+
+
+
+

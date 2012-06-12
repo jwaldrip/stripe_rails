@@ -1,16 +1,30 @@
 module StripeRails
   class Customer
+
+    # Support for mongoid
     include Mongoid::Document
-    include Mongoid::Timestamps::Updated
+    include Mongoid::Timestamps
+
+    store_in collection: "stripe_customers"
+
+    field :data, type: String, default: -> { nil }
+    field :unit_price, type: Float
+    field :_id, type: String, default: -> { nil }
 
     attr_readonly :_id
-    attr_accessible :data
 
-    field :data, type: Hash, default: -> { Hash.new }
-    field :_id, type: String
+    def charges
+      StripeRails::Charge.new(@customer)
+    end
 
-    def initialize(attributes={},options={})
-      attributes = { data: attributes } if self.new_record?
+    ActionDispatch::Session::CookieStore
+
+    def invoices
+      StripeRails::Invoice.new(@customer)
+    end
+
+    def initialize(attributes={}, options={})
+      attributes = { data: attributes.to_json.to_a.pack('m') } if self.new_record?
       super(attributes,options)
     end
 
@@ -32,18 +46,17 @@ module StripeRails
       private :find_by
     end
 
-    #private :attributes=, :update_attributes, :update_attributes!, :data
+    private :attributes=, :update_attributes, :update_attributes!
 
     def method_missing(meth, *args, &block)
-      if data.has_key?(meth.to_s) && !meth =~ /=$/
-        data[meth.to_s]
-      elsif meth =~ /=$/ && %w(card= description= coupon= email=).include?(meth.to_s) && args.size == 1
-        @customer.send meth, args.first
-        self.data[meth.to_s.sub(/=$/,'').to_s] = args.first if %w(description= email=).include?(meth.to_s)
-      elsif meth =~ /=$/ && !%w(card= description= coupon= email=).include?(meth.to_s)
-        super
-      elsif @customer.respond_to?(meth.to_sym)
-        @customer.send meth, *args
+      if @customer.respond_to?(meth.to_sym)
+        value = @customer.send meth, *args
+        refresh_from @customer
+        value
+      elsif meth =~ /=$/ && %w(card= description= coupon= email=).include?(meth.to_s)
+        value = @customer.send meth, *args
+        refresh_from @customer
+        value
       else
         super
       end
@@ -55,54 +68,58 @@ module StripeRails
     before_destroy     :stripe_destroy
 
     def delete(options={})
-      customer = Stripe::Customer.construct_from(data)
-      customer.delete
+      @customer.delete
       super(options)
     end
 
     def refresh!
       @customer = Stripe::Customer.retrieve(id)
-      self.update_attributes(data: @customer.to_hash)
+      send :data=, @customer.to_json.to_a.pack('m')
+      save
       self
     end
 
-    def status
-
-    end
-
     def days_remaining_in_trial
-
+      if subscription && subscription.status == 'trialing'
+        ((Time.at(subscription.trial_end) - Time.now) / 24 / 60 / 60).ceil
+      elsif subscription
+        0
+      else
+        nil
+      end
     end
 
-    def charge
-      StripeRails::Charge.new(@customer)
+    # Using a callback so that we can call create and save on a new record
+    def create_customer
+      params = {}
+      params['description'] = stripe_customer.stripe_description if stripe_customer.respond_to? :stripe_description
+      refresh_from Stripe::Customer.create(params)
+
+      if stripe_customer.respond_to? :stripe_subscription_plan
+        @customer.update_subscription({ plan: stripe_customer.stripe_subscription_plan })
+        refresh_from @customer
+      end
+
+      self._id = @customer.id
+      self.unit_price = stripe_customer.stripe_unit_price
+
+      save
     end
 
     private
 
     def refresh_from(stripe_object)
-      raise "Is not a stripe customer!" unless stripe_object.kind_of? Stripe::StripeCustomer
+      raise Stripe::InvalidObjectError, "Is not a stripe customer!" unless stripe_object.kind_of? Stripe::Customer
       @customer = stripe_object
-      self.attributes = { data: @customer.to_hash }
+      send :data=, @customer.to_json.to_a.pack('m')
       self
-    end
-
-    # Using a callback so that we can call create and save on a new record
-    def stripe_create
-      self.data['description'] = _parent.stripe_description if _parent.respond_to? :stripe_description
-      refresh_from Stripe::Customer.create(data)
-      @customer.update_subscription(_parent.stripe_subscription) if _parent.respond_to? :stripe_subscription
-      self._id = data[:id]
     end
 
     def stripe_read
       if !new_record? && updated_at && updated_at < 1.day.ago
         self.refresh!
-      elsif new_record? and id
-        @customer = Stripe::Customer.retrieve(id)
-        self.attributes = { data: @customer.to_hash }
       else
-        @customer = Stripe::Customer.construct_from(data)
+        @customer = Stripe::Customer.construct_from(JSON.parse data.unpack('m').first ) if data && data.unpack('m').first.present?
       end
     end
 
