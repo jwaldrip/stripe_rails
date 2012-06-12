@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a272a977-ad9c-42e3-ae92-f3cbf41f8c93" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.textile" afterPath="$PROJECT_DIR$/README.textile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stripe_rails.gemspec" afterPath="$PROJECT_DIR$/stripe_rails.gemspec" />
     </list>
     <ignored path="stripe_rails.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -51,10 +52,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.textile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="README.textile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.textile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="6" selection-start="1871" selection-end="1871" vertical-scroll-proportion="-0.14806378">
+            <state line="46" column="6" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stripe_rails.gemspec" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/stripe_rails.gemspec">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="20" selection-start="317" selection-end="317" vertical-scroll-proportion="0.18223235">
               <folding />
             </state>
           </provider>
@@ -82,15 +92,6 @@
         <entry file="file://$PROJECT_DIR$/lib/stripe_rails/acts_as_customer.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="39" column="31" selection-start="1242" selection-end="1257" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="stripe_rails.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/stripe_rails.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="3" column="44" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -127,7 +128,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/stripe_rails/charge/document.rb" />
         <option value="$PROJECT_DIR$/app/models/stripe_rails/charge.rb" />
         <option value="$PROJECT_DIR$/lib/stripe_rails/errors.rb" />
         <option value="$PROJECT_DIR$/lib/generators/stripe_callback/USAGE" />
@@ -143,6 +143,7 @@
         <option value="$PROJECT_DIR$/lib/stripe_rails/acts_as_customer.rb" />
         <option value="$PROJECT_DIR$/app/models/stripe_rails/customer.rb" />
         <option value="$PROJECT_DIR$/README.textile" />
+        <option value="$PROJECT_DIR$/stripe_rails.gemspec" />
       </list>
     </option>
   </component>
@@ -469,11 +470,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/lib/generators/stripe_callback/stripe_callback_generator.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="41" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/stripe_callbacks/ping_callback.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="7" column="4" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" />
@@ -562,7 +558,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/README.textile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="6" selection-start="1871" selection-end="1871" vertical-scroll-proportion="-0.14806378">
+        <state line="46" column="6" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stripe_rails.gemspec">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="20" selection-start="317" selection-end="317" vertical-scroll-proportion="0.18223235">
           <folding />
         </state>
       </provider>

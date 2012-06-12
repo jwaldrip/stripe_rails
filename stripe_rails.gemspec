@@ -7,13 +7,13 @@ require "stripe_rails/version"
 Gem::Specification.new do |s|
   s.name        = "stripe_rails"
   s.version     = StripeRails::VERSION
-  s.authors     = ["TODO: Your name"]
-  s.email       = ["TODO: Your email"]
-  s.homepage    = "TODO"
-  s.summary     = "TODO: Summary of StripeRails."
-  s.description = "TODO: Description of StripeRails."
+  s.authors     = ["Jason Waldrip"]
+  s.email       = ["jason@waldrip.net"]
+  s.homepage    = "https://github.com/jwaldrip/stripe_rails"
+  s.summary     = "Stripe Rails was built on top of the official stripe gem for easier integration into a rails project."
+  s.description = "Stripe Rails was built on top of the official stripe gem to bring ease of use of stripe in your models. The gem also caches the stripe customer response so that if you often use it to check a customers subscription status, it wont have to reach the stripe API on every page load. Lastly, this gem has built in responses for stripe webhooks/callbacks."
 
-  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.rdoc"]
+  s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.textile"]
 
   s.add_dependency "rails", "~> 3.2.5"
   s.add_dependency "jquery-rails"
