@@ -2,11 +2,21 @@ module StripeRails::ActsAsCustomer
   extend ActiveSupport::Concern
 
   included do
-    has_one :stripe, class_name: 'StripeRails::Customer', autobuild: true, dependent: :destroy, as: :stripe_customer
-    before_create :create_stripe_customer
 
-    StripeRails::Customer.send :belongs_to, :stripe_customer, class_name: self.to_s, polymorphic: true
-    StripeRails::Customer.send :validates_presence_of, :stripe_customer_id
+    # Mongoid
+    if self.respond_to?(:field)
+      field :stripe_customer_id
+    elsif self.kind_of(ActiveRecord::Base)
+      StripeRails::StripeCustomer.send :belongs_to, :stripe_customerable, class_name: self.to_s, polymorphic: true, dependent: :destroy
+      has_one :stripe_customer, class_name: 'StripeRails::StripeCustomer', as: :stripe_customerable
+      delegate :stripe_customer_id, :stripe_customer
+    else
+      raise "ORM is not supported, use ActiveRecord or Mongoid"
+    end
+
+    def stripe
+      Stripe::Customer.retrieve(stripe_customer_id) if stripe_customer_id
+    end
 
     def self.stripe_description(method)
       send :define_method, :stripe_description do
@@ -37,7 +47,14 @@ module StripeRails::ActsAsCustomer
   end
 
   def create_stripe_customer
-    self.stripe.create_customer
+    return false if stripe
+    params = {}
+    params['description'] = stripe_description if respond_to? :stripe_description
+    self.stripe_customer_id = Stripe::Customer.create(params).id
+
+    #stripe.update_subscription(plan: stripe_subscription_plan }) if respond_to? :stripe_subscription_plan
+
+    save!
   end
 
 end

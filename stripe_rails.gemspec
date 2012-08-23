@@ -11,14 +11,13 @@ Gem::Specification.new do |s|
   s.email       = ["jason@waldrip.net"]
   s.homepage    = "https://github.com/jwaldrip/stripe_rails"
   s.summary     = "Stripe Rails was built on top of the official stripe gem for easier integration into a rails project."
-  s.description = "Stripe Rails was built on top of the official stripe gem to bring ease of use of stripe in your models. The gem also caches the stripe customer response so that if you often use it to check a customers subscription status, it wont have to reach the stripe API on every page load. Lastly, this gem has built in responses for stripe webhooks/callbacks."
+  s.description = "Stripe Rails was built on top of the official stripe gem to bring ease of use of stripe in your models. The gem also uses your applications cache to store objects locally so that you dont have to continuously hit Stripes API, it wont have to reach the stripe API on every page load. Lastly, this gem has built in responses for stripe webhooks/callbacks."
 
   s.files = Dir["{app,config,db,lib}/**/*"] + ["MIT-LICENSE", "Rakefile", "README.textile"]
 
-  s.add_dependency "rails", "~> 3.2.5"
+  s.add_dependency "rails"
   s.add_dependency "jquery-rails"
   s.add_dependency "stripe"
-  s.add_dependency "mongoid", "~> 3.0.0.rc"
 
   s.add_development_dependency "rspec-rails"
 

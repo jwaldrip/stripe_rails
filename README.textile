@@ -12,7 +12,7 @@ gem 'stripe_rails'
 
 h3. Compatibility
 
-The gem works with rails 3.2.x and mongoid 3.0.0, support for active record will be coming in the very next release.
+The gem works with rails 3.2.x and mongoid and active:record when using model relationships. It uses rails cache to cache the stripe object for 1 hour on subsequent get requests.
 
 h2. Usage
 

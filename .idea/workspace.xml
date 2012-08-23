@@ -2,7 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a272a977-ad9c-42e3-ae92-f3cbf41f8c93" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/models/stripe_rails/stripe_customer.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/db/migrate/20120822045452_create_stripe_rails_stripe_customers.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/stripe_rails/cache.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/lib/stripe_rails/helpers.rb" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/fixtures/stripe_rails/stripe_customers.yml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/test/unit/stripe_rails/stripe_customer_test.rb" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/stripe_rails/charge.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/stripe_rails/customer.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/app/models/stripe_rails/invoice.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/db/migrate/20120608044024_create_stripe_rails_customers.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/stripe_rails/errors.rb" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/lib/stripe_rails/pci_compliance.rb" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/stripe_rails.iml" afterPath="$PROJECT_DIR$/.idea/stripe_rails.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.textile" afterPath="$PROJECT_DIR$/README.textile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/stripe_rails.rb" afterPath="$PROJECT_DIR$/lib/stripe_rails.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/stripe_rails/acts_as_customer.rb" afterPath="$PROJECT_DIR$/lib/stripe_rails/acts_as_customer.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/stripe_rails/engine.rb" afterPath="$PROJECT_DIR$/lib/stripe_rails/engine.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/stripe_rails/version.rb" afterPath="$PROJECT_DIR$/lib/stripe_rails/version.rb" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/stripe_rails.gemspec" afterPath="$PROJECT_DIR$/stripe_rails.gemspec" />
     </list>
     <ignored path="stripe_rails.iws" />
@@ -25,64 +46,55 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="cache.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/stripe_rails/cache.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="5" column="60" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="callbacks_controller.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/stripe_rails/callbacks_controller.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="0" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="routes.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/config/routes.rb">
-          <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="customer.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/models/stripe_rails/customer.rb">
+      <file leaf-file-name="api_resource.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/stripe-1.7.1/lib/stripe/api_resource.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="92" column="23" selection-start="2308" selection-end="2308" vertical-scroll-proportion="-19.846153">
+            <state line="21" column="36" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="README.textile" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.textile">
+      <file leaf-file-name="stripe.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/stripe-1.7.1/lib/stripe.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="6" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
+            <state line="180" column="31" selection-start="5168" selection-end="5188" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="stripe_rails.gemspec" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/stripe_rails.gemspec">
+      <file leaf-file-name="stripe_object.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/stripe-1.7.1/lib/stripe/stripe_object.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="20" selection-start="317" selection-end="317" vertical-scroll-proportion="0.18223235">
+            <state line="5" column="26" selection-start="90" selection-end="112" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="version.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/stripe_rails/version.rb">
+      <file leaf-file-name="helpers.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/lib/stripe_rails/helpers.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="20120608044024_create_stripe_rails_customers.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/db/migrate/20120608044024_create_stripe_rails_customers.rb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="19" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+            <state line="3" column="31" selection-start="54" selection-end="77" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -91,25 +103,34 @@
       <file leaf-file-name="acts_as_customer.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/stripe_rails/acts_as_customer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="39" column="31" selection-start="1242" selection-end="1257" vertical-scroll-proportion="0.0">
+            <state line="54" column="32" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pci_compliance.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/stripe_rails/pci_compliance.rb">
+      <file leaf-file-name="stripe_customer.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/models/stripe_rails/stripe_customer.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="3" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0">
+            <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="errors.rb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/lib/stripe_rails/errors.rb">
+      <file leaf-file-name="README.textile" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.textile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="11" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0">
+            <state line="14" column="178" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -128,22 +149,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/stripe_rails/charge.rb" />
-        <option value="$PROJECT_DIR$/lib/stripe_rails/errors.rb" />
-        <option value="$PROJECT_DIR$/lib/generators/stripe_callback/USAGE" />
-        <option value="$PROJECT_DIR$/lib/stripe_rails/engine.rb" />
-        <option value="$PROJECT_DIR$/lib/stripe_rails/callback.rb" />
-        <option value="$PROJECT_DIR$/app/stripe_callbacks/ping_callback.rb" />
-        <option value="$PROJECT_DIR$/lib/generators/stripe_callback/stripe_callback_generator.rb" />
-        <option value="$PROJECT_DIR$/lib/stripe_rails/autoload_const_defined.rb" />
-        <option value="$PROJECT_DIR$/lib/stripe_rails.rb" />
-        <option value="$PROJECT_DIR$/app/controllers/stripe_rails/callbacks_controller.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20120608044024_create_stripe_rails_customers.rb" />
         <option value="$PROJECT_DIR$/README.rdoc" />
-        <option value="$PROJECT_DIR$/lib/stripe_rails/acts_as_customer.rb" />
+        <option value="$PROJECT_DIR$/lib/stripe_rails/acts_as_customer_mongoid.rb" />
         <option value="$PROJECT_DIR$/app/models/stripe_rails/customer.rb" />
-        <option value="$PROJECT_DIR$/README.textile" />
         <option value="$PROJECT_DIR$/stripe_rails.gemspec" />
+        <option value="$PROJECT_DIR$/lib/stripe_rails/engine.rb" />
+        <option value="$PROJECT_DIR$/lib/stripe_rails/version.rb" />
+        <option value="$PROJECT_DIR$/lib/stripe_rails/api_resource.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20120608044024_create_stripe_rails_customers.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20120822045452_create_stripe_rails_stripe_customers.rb" />
+        <option value="$PROJECT_DIR$/app/models/stripe_rails/stripe_customer.rb" />
+        <option value="$PROJECT_DIR$/lib/stripe_rails/helpers.rb" />
+        <option value="$PROJECT_DIR$/lib/stripe_rails.rb" />
+        <option value="$PROJECT_DIR$/lib/stripe_rails/acts_as_customer.rb" />
+        <option value="$PROJECT_DIR$/lib/stripe_rails/cache.rb" />
+        <option value="$PROJECT_DIR$/README.textile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -178,58 +199,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stripe_rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stripe_rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stripe_rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stripe_rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stripe_rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stripe_rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stripe_rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="lib" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="stripe_rails" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -240,15 +209,172 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="ProjectPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="External Libraries" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ExternalLibrariesNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="lib" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="db" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="migrate" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_callbacks" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stripe_rails" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="options.lastSelected" value="org.jetbrains.plugins.ruby.settings.RubyIdeSdkConfigurable" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/lib/stripe_rails" />
+      <recent name="$PROJECT_DIR$/lib/stripe" />
+      <recent name="$PROJECT_DIR$/lib" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration default="true" type="RSpecRunConfigurationType" factoryName="RSpec">
@@ -277,9 +403,7 @@
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_SPEC_RUNNER" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RSPEC_RUN_CONFIG_SETTINGS_ID NAME="FULL_BACKTRACE" VALUE="false" />
-      <method>
-        <option name="RakeTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="RubyRunConfigurationType" factoryName="Ruby">
       <module name="" />
@@ -297,9 +421,7 @@
       </EXTENSION>
       <RUBY_RUN_CONFIG NAME="SCRIPT_PATH" VALUE="" />
       <RUBY_RUN_CONFIG NAME="SCRIPT_ARGS" VALUE="" />
-      <method>
-        <option name="RakeTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="TestUnitRunConfigurationType" factoryName="Test::Unit/Shoulda/Minitest">
       <predefined_log_file id="RUBY_TESTUNIT" enabled="true" />
@@ -323,9 +445,7 @@
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="TEST_TEST_TYPE" VALUE="TEST_SCRIPT" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="DRB" VALUE="false" />
       <RTEST_RUN_CONFIG_SETTINGS_ID NAME="RUNNER_OPTIONS" VALUE="" />
-      <method>
-        <option name="RakeTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <configuration default="true" type="CucumberRunConfigurationType" factoryName="Cucumber">
       <predefined_log_file id="RUBY_CUCUMBER" enabled="true" />
@@ -358,9 +478,7 @@
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="CUCUMBER_RUNNER_PATH" VALUE="" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="USE_CUSTOM_RUNNER" VALUE="false" />
       <CUCUMBER_RUN_CONFIG_SETTINGS_ID NAME="SETTINGS_VERSION" VALUE="2" />
-      <method>
-        <option name="RakeTask" enabled="false" />
-      </method>
+      <method />
     </configuration>
     <list size="0" />
   </component>
@@ -380,6 +498,7 @@
     <option name="IGNORE_SPACES_IN_ANNOTATE" value="true" />
     <option name="SHOW_MERGE_SOURCES_IN_ANNOTATE" value="true" />
     <option name="FORCE_UPDATE" value="false" />
+    <option name="IGNORE_EXTERNALS" value="false" />
     <configuration useDefault="true">$USER_HOME$/.subversion_IDEA</configuration>
     <myIsUseDefaultProxy>false</myIsUseDefaultProxy>
   </component>
@@ -395,17 +514,18 @@
     <frame x="0" y="22" width="1680" height="1024" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29963234" sideWeight="0.67098165" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21909425" sideWeight="0.3322546" order="1" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21909425" sideWeight="0.66019416" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Data Sources" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -437,7 +557,6 @@
     <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
     <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
     <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="ENABLE_BACKGROUND_PROCESSES" value="false" />
     <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
     <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
     <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
@@ -447,7 +566,6 @@
     <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="CREATE_PATCH_EXPAND_DETAILS_DEFAULT" value="true" />
     <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
     <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
@@ -470,102 +588,114 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/stripe-1.7.1/lib/stripe/customer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="22" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/bundler/gems/stripe-ruby-462d99c34d27/lib/stripe.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="52" selection-start="5494" selection-end="5538" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/stripe_callbacks/ping_callback.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="4" selection-start="103" selection-end="103" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/stripe_rails/callback.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/stripe_rails/autoload_const_defined.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="10" selection-start="108" selection-end="108" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/stripe_rails.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="44" selection-start="142" selection-end="142" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/stripe_rails/pci_compliance.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="3" selection-start="177" selection-end="177" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/stripe_rails/errors.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="11" selection-start="720" selection-end="720" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/config/routes.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/rack-1.4.1/lib/rack/session/cookie.rb">
+    <entry file="file://$PROJECT_DIR$/lib/stripe_rails/callback.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="10" selection-start="1551" selection-end="1551" vertical-scroll-proportion="0.35079727">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p125/lib/ruby/gems/1.9.1/gems/actionpack-3.2.5/lib/action_dispatch/middleware/session/cookie_store.rb">
+    <entry file="file://$PROJECT_DIR$/db/migrate/20120822045452_create_stripe_rails_stripe_customers.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="41" selection-start="2060" selection-end="2060" vertical-scroll-proportion="0.3621868">
+        <state line="6" column="3" selection-start="180" selection-end="180" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20120608044024_create_stripe_rails_customers.rb">
+    <entry file="file://$PROJECT_DIR$/lib/stripe_rails.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="19" selection-start="154" selection-end="154" vertical-scroll-proportion="0.0">
+        <state line="1" column="29" selection-start="58" selection-end="58" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/stripe_rails/helpers.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="3" column="31" selection-start="54" selection-end="77" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/stripe_rails/acts_as_customer.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="31" selection-start="1242" selection-end="1257" vertical-scroll-proportion="0.0">
+        <state line="54" column="32" selection-start="1701" selection-end="1701" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/stripe-1.7.1/lib/stripe/stripe_object.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="26" selection-start="90" selection-end="112" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/stripe-1.7.1/lib/stripe.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="180" column="31" selection-start="5168" selection-end="5188" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/.rbenv/versions/1.9.3-p194/lib/ruby/gems/1.9.1/gems/stripe-1.7.1/lib/stripe/api_resource.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="36" selection-start="670" selection-end="670" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/stripe_rails/cache.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="5" column="60" selection-start="123" selection-end="123" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/stripe_rails/callbacks_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="0" selection-start="623" selection-end="623" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/models/stripe_rails/customer.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="92" column="23" selection-start="2308" selection-end="2308" vertical-scroll-proportion="-19.846153">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/lib/stripe_rails/version.rb">
-      <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/models/stripe_rails/stripe_customer.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="18" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.textile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="6" selection-start="1871" selection-end="1871" vertical-scroll-proportion="0.0">
+        <state line="14" column="178" selection-start="676" selection-end="676" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/stripe_rails.gemspec">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="20" selection-start="317" selection-end="317" vertical-scroll-proportion="0.18223235">
+        <state line="0" column="1" selection-start="1" selection-end="1" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
